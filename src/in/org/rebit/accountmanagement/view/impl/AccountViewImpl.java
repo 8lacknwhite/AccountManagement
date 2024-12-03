@@ -20,7 +20,7 @@ public class AccountViewImpl implements AccountView {
 
 	@Override
 	public void getBody() {
-		getMessage("1. Add Account\nEnter your choice:");
+		getMessage("1. Add Account \n2. Delete Account \n3. Search Account \nEnter your choice:");
 		
 	}
 

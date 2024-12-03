@@ -32,9 +32,27 @@ public class AccountController {
 				Account account = factory.getAccount(name, balance);
 				service.addAccount(account);
 			}
+			case 2->{
+				view.getMessage("Enter id:");
+				int id = view.acceptInt(sc);
+				service.deleteAccount(id);
+			}
+			case 3->{
+				view.getMessage("Enter id:");
+				int id = view.acceptInt(sc);
+				System.out.println(service.findAccount(id)); 
+			}
+			case 4->{
+				System.out.println(service.findAllAccount()); 
+			}
+			case 5->{
+			view.getMessage("Enter balance:");
+			int balance = view.acceptInt(sc);
+			
+			System.out.println(service.findAllAccountMoreThan(balance));
 			}
 			
-			
+			}
 			
 		}while(options !=-1);
 
