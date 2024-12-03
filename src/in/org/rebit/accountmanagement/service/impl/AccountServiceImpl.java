@@ -23,10 +23,9 @@ public class AccountServiceImpl implements AccountService {
 	}
 
 	@Override
-	public void addAccount(Account account) {
+	public Account addAccount(Account account) {
 		
-		System.out.println("In service");//testing
-		this.dao.createAccount(account);
+		return this.dao.createAccount(account);
 		
 	}
 
@@ -51,6 +50,11 @@ public class AccountServiceImpl implements AccountService {
 	@Override
 	public List<Account> findAllAccountMoreThan(int balance) {
 		return this.filterAccounts(account -> account.getAccountbalance()>balance).toList();
+	}
+
+	@Override
+	public long CountofAccountsMoreThan(int balance) {
+		return this.filterAccounts(account -> account.getAccountbalance()>balance).count();
 	}
 
 }

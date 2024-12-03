@@ -6,7 +6,7 @@ import in.org.rebit.accountmanagement.entity.Account;
 
 public interface AccountDao {
 
-	public void createAccount(Account account);
+	public Account createAccount(Account account);
 	public boolean deleteAccount(int id);
 	public Account searchAccount(int id);
 	public List<Account> getAllAccounts();

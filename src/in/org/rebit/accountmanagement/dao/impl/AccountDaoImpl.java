@@ -16,11 +16,11 @@ public class AccountDaoImpl implements AccountDao{
 	}
 
 	@Override
-	public void createAccount(Account account) {
+	public Account createAccount(Account account) {
 		
-		System.out.println("In dao");//testing
+		
 		accounts.add(account);
-		System.out.println(account);
+		return account;
 		
 	}
 

@@ -30,7 +30,7 @@ public class AccountController {
 				view.getMessage("Enter Amount in the account");
 				int balance = view.acceptInt(sc);
 				Account account = factory.getAccount(name, balance);
-				service.addAccount(account);
+				System.out.println(service.addAccount(account));
 			}
 			case 2->{
 				view.getMessage("Enter id:");
@@ -50,6 +50,12 @@ public class AccountController {
 			int balance = view.acceptInt(sc);
 			
 			System.out.println(service.findAllAccountMoreThan(balance));
+			}
+			case 6 ->{
+				view.getMessage("Enter balance:");
+				int balance = view.acceptInt(sc);
+				
+				System.out.println(service.CountofAccountsMoreThan(balance));
 			}
 			
 			}
